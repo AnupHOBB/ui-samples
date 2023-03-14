@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <style>
+            body { background-color: rgb(58, 58, 58); }
+
+            img
+            {
+                display: block;
+                margin: auto;
+                margin-top: 30vh;
+                border-radius: 50%;
+                width: 300px;
+                height: 300px;
+            }
+
+            div
+            {
+                background-color: white;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+            }
+        </style>
+        <script type="module">
+            import * as THREE from './node_modules/three/src/Three.js'
+
+            let sliderBackground
+            let sliderIndicator
+            let centre = { x:0, y:0, z:0 }
+            let isMouseDown = false
+            let angle = 0
+            let ogVector
+            let prevPos
+
+            let load = () =>
+            {
+                sliderBackground = document.querySelector('img')
+                sliderIndicator = document.createElement('div')
+                let sliderBounds = sliderBackground.getBoundingClientRect()
+                let x = sliderBounds.x + (sliderBounds.width/2)
+                let y = sliderBounds.y
+                centre.x = x
+                centre.y = y + (sliderBounds.height/2)
+                ogVector = subtractVectors({ x: x, y: y, z: 0}, centre)
+                window.onfocus = () => { isMouseDown = false } 
+                window.onmousedown = () => { isMouseDown = true }
+                window.onmouseup = () => { isMouseDown = false }
+                window.onmousemove = (e) => {
+                    if (isMouseDown)
+                    {
+                        let newVector = subtractVectors({ x: e.clientX, y: e.clientY, z: 0}, centre)
+                        angle = angleBetwenVectors(ogVector, newVector)
+                        if (e.clientX < centre.x)
+                            angle = -angle
+                        console.log(angle)
+                        prevPos.x = e.clientX
+                        prevPos.y = e.clientY
+                        ogVector = subtractVectors({ x: x, y: y, z: 0}, centre) 
+                    }
+                }
+                ogVector = subtractVectors({ x: x, y: y, z: 0}, centre) 
+                document.body.appendChild(sliderIndicator)
+                setInterval(placeSliderCursor, 10)
+            }
+
+            function placeSliderCursor()
+            {
+                let sliderBounds = sliderBackground.getBoundingClientRect()
+                let x = sliderBounds.x + (sliderBounds.width/2)
+                let y = sliderBounds.y
+                centre.x = x
+                centre.y = y + (sliderBounds.height/2)
+                ogVector = subtractVectors({ x: x, y: y, z: 0}, centre) 
+                let rotationVector = new THREE.Vector3(ogVector.x, ogVector.y, ogVector.z)
+                rotationVector.applyAxisAngle(new THREE.Vector3(0, 0, 1), toRadians(angle))
+                let finalPos = addVectors(centre, rotationVector)
+                sliderIndicator.style = 'position:absolute; top:'+(finalPos.y - 10)+'; left:'+finalPos.x+';'
+                prevPos = { x: finalPos.x, y: (finalPos.y - 10), z: 0 }
+            }
+
+            function cosineVectors(v1, v2)
+            {
+                let v1Normalized = normalize(v1)
+                let v2Normalized = normalize(v2)
+                return dot(v1Normalized, v2Normalized)
+            }
+
+            function toDegrees(radians) { return (radians * 7 * 180)/22 }
+
+            function toRadians(degrees) { return (degrees * 22) / (7 * 180) }
+
+            function angleBetwenVectors(v1, v2) { return toDegrees(Math.acos(cosineVectors(v1, v2))) }
+
+            function dot(v1, v2) { return v1.x * v2.x + v1.y * v2.y + v1.z * v2.z  }
+
+            function length(v) { return Math.sqrt((v.x * v.x)+(v.y * v.y)+(v.z * v.z)) }
+
+            function normalize(v)
+            {
+                let len = length(v)
+                return { x: v.x/len, y: v.y/len, z: v.z/len}
+            }
+
+            function addVectors(v1, v2) { return { x: v1.x + v2.x, y: v1.y + v2.y, z: v1.z + v2.z } }
+
+            function subtractVectors(v1, v2) { return { x: v1.x - v2.x, y: v1.y - v2.y, z: v1.z - v2.z } }
+
+            window.onload = load
+        </script>
+    </head>
+    <body>
+        <img src="./assets/envmap.png"/>
+    </body>
+</html>
