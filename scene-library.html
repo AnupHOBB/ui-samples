@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <style>
+            #scene-lib-menu
+            {
+                position: absolute;
+                top: 0%;
+                left: 0%;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.4);
+            }
+
+            #scene-lib-container
+            {
+                position: absolute;
+                top: 25%;
+                left: 0%;
+                width: 100%;
+                height: 50%;
+            }
+
+            #scene-lib-list
+            {
+                display: flex;
+                margin: auto;
+                gap: 1%;
+                overflow-x: auto;
+                width: 80%;
+                height: 100%;
+            }
+
+            .scene-lib-item { height: 100%; }
+
+            #scene-lib-btn-container 
+            { 
+                position: absolute;
+                top: 0%;
+                left: 0%;
+                width: 100%;
+            }
+
+            p#scene-lib-btn
+            {
+                display: block;
+                margin: auto;
+                padding: 1%;
+                width: 20vh;
+                background-color: rgb(230, 62, 48);
+                text-align: center;
+                color: rgb(221, 221, 221);
+                font-family: 'Trade Gothic LT Std', sans-serif;
+                font-size: 2vh;
+            }
+
+            @media screen and (max-aspect-ratio : 1)
+            {
+                img#scene-lib-cross-icon
+                {
+                    position: absolute;
+                    top: 1%;
+                    right: 1%;
+                    height: 5%;
+                }
+            }
+
+            @media screen and (min-aspect-ratio : 1) and (max-height : 500px)
+            {
+                img#scene-lib-cross-icon
+                {
+                    position: absolute;
+                    top: 1%;
+                    right: 1%;
+                    width: 3%;
+                }
+            }
+
+            @media screen and (min-aspect-ratio : 1) and (min-height : 500px)
+            {
+                img#scene-lib-cross-icon
+                {
+                    position: absolute;
+                    top: 1%;
+                    right: 1%;
+                    width: 2.5%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="scene-lib-menu">
+            <div id="scene-lib-container">
+                <div id="scene-lib-list">
+                    <img class="scene-lib-item" src="assets/residential.jpg"/>
+                    <img class="scene-lib-item" src="assets/residential-2.jpg"/>
+                    <img class="scene-lib-item" src="assets/commercial.jpg"/>
+                    <img class="scene-lib-item" src="assets/commercial-2.jpg"/>
+                </div>
+            </div>
+            <img id="scene-lib-cross-icon" src="assets/cross.png"/>
+        </div>
+        <div id="scene-lib-btn-container">
+            <p id="scene-lib-btn">SCENE LIBRARY</p>
+        </div>
+    </body>
+</html>

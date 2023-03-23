@@ -52,7 +52,6 @@
                         angle = angleBetwenVectors(ogVector, newVector)
                         if (e.clientX < centre.x)
                             angle = -angle
-                        console.log(angle)
                         prevPos.x = e.clientX
                         prevPos.y = e.clientY
                         ogVector = subtractVectors({ x: x, y: y, z: 0}, centre) 
@@ -74,7 +73,10 @@
                 let rotationVector = new THREE.Vector3(ogVector.x, ogVector.y, ogVector.z)
                 rotationVector.applyAxisAngle(new THREE.Vector3(0, 0, 1), toRadians(angle))
                 let finalPos = addVectors(centre, rotationVector)
-                sliderIndicator.style = 'position:absolute; top:'+(finalPos.y - 10)+'; left:'+finalPos.x+';'
+                let indicatorCss = window.getComputedStyle(sliderIndicator)
+                let indicatorWidth = pxToNumber(indicatorCss.width)
+                let indicatorHeight = pxToNumber(indicatorCss.height)
+                sliderIndicator.style = 'position:absolute; top:'+(finalPos.y - (indicatorHeight/2))+'; left:'+(finalPos.x - (indicatorWidth/2))+';'
                 prevPos = { x: finalPos.x, y: (finalPos.y - 10), z: 0 }
             }
 
@@ -104,6 +106,14 @@
             function addVectors(v1, v2) { return { x: v1.x + v2.x, y: v1.y + v2.y, z: v1.z + v2.z } }
 
             function subtractVectors(v1, v2) { return { x: v1.x - v2.x, y: v1.y - v2.y, z: v1.z - v2.z } }
+
+            function pxToNumber(pxValueInString)
+            {
+                let numberAsChars = [] 
+                for (let i=0; i<(pxValueInString.length - 2); i++)
+                    numberAsChars.push(pxValueInString.charAt(i))
+                return Number.parseInt(numberAsChars.join(''))
+            }
 
             window.onload = load
         </script>
