@@ -11,6 +11,7 @@
                 border-radius: 50%;
                 width: 300px;
                 height: 300px;
+                user-select: none;
             }
 
             div
@@ -31,6 +32,8 @@
             let angle = 0
             let ogVector
             let prevPos
+            let min = 0
+            let max = 360
 
             let load = () =>
             {
@@ -78,6 +81,14 @@
                 let indicatorHeight = pxToNumber(indicatorCss.height)
                 sliderIndicator.style = 'position:absolute; top:'+(finalPos.y - (indicatorHeight/2))+'; left:'+(finalPos.x - (indicatorWidth/2))+';'
                 prevPos = { x: finalPos.x, y: (finalPos.y - 10), z: 0 }
+                showValue()
+            }
+
+            function showValue()
+            {
+                let value = (angle<0)?360+angle:angle
+                let convertedValue = ((value * (max - min))/360) + min
+                console.log(`value: ${convertedValue} || min: 0 || max: 360`)
             }
 
             function cosineVectors(v1, v2)
