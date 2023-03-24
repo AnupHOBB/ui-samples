@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <style>
+            div#qrcode-menu
+            {
+                position: absolute;
+                top: 0%;
+                left: 0%;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.4);
+            }
+
+            @media screen and (max-aspect-ratio : 1)
+            {
+                div#qrcode-container
+                {
+                    position: absolute;
+                    top: 20%;
+                    left: 0%;
+                    width: 100%;
+                    height: 50%;
+                }
+            }
+
+            @media screen and (min-aspect-ratio : 1)
+            {
+                div#qrcode-container
+                {
+                    position: absolute;
+                    top: 25%;
+                    left: 0%;
+                    width: 100%;
+                    height: 50%;
+                }
+            }
+
+            @media screen and (max-aspect-ratio : 1)
+            {
+                div#qrcode > img
+                { 
+                    display: block;
+                    margin: auto;
+                    width: 80%; 
+                }
+            }
+
+            @media screen and (min-aspect-ratio : 1)
+            {
+                div#qrcode > img
+                { 
+                    display: block;
+                    margin: auto;
+                    height: 100%; 
+                }
+            }
+
+            #qr-cross-icon
+            {
+                position: absolute;
+                top: 1%;
+                right: 1%;
+            }
+        </style>
+        <script type="text/javascript" src="qrcode.min.js"></script>
+        <script type="module"> window.onload = () => { new QRCode(document.getElementById('qrcode'), window.location.href) } </script>
+    </head>
+    <body>
+        <div id="qrcode-menu">
+            <div id="qrcode-container"><div id="qrcode"></div></div>
+            <img id="qr-cross-icon" src="assets/cross.png"/>
+        </div></body>
+</html>
