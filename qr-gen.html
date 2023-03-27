@@ -2,19 +2,82 @@
     <head>
         <meta name="viewport" content="width=device-width, user-scalable=no">
         <style>
-            div#qrcode-menu
+            body { background-color: black; }
+
+            @media screen and (max-aspect-ratio : 1)
+            {
+                #qr-title
+                {
+                    display: block;
+                    margin: auto;
+                    padding-top: 2%;
+                    padding-bottom: 2%;
+                    width: 25vh;
+                    background-color: rgb(230, 62, 48);
+                    text-align: center;
+                    color: rgb(221, 221, 221);
+                    font-family: 'Trade Gothic LT Std', sans-serif;
+                    font-size: 2vh;
+                    border-bottom-left-radius: 1ch;
+                    border-bottom-right-radius: 1ch;
+                }
+            }
+
+            @media screen and (min-aspect-ratio : 1) and (max-height: 600px)
+            {
+                #qr-title
+                {
+                    display: block;
+                    margin: auto;
+                    padding-top: 1%;
+                    padding-bottom: 1%;
+                    width: 90vh;
+                    background-color: rgb(230, 62, 48);
+                    text-align: center;
+                    color: rgb(221, 221, 221);
+                    font-family: 'Trade Gothic LT Std', sans-serif;
+                    font-size: 4vh;
+                    border-bottom-left-radius: 1ch;
+                    border-bottom-right-radius: 1ch;
+                }
+            }
+
+            @media screen and (min-aspect-ratio : 1) and (min-height: 600px)
+            {
+                #qr-title
+                {
+                    display: block;
+                    margin: auto;
+                    padding-top: 1%;
+                    padding-bottom: 1%;
+                    width: 45vh;
+                    background-color: rgb(230, 62, 48);
+                    text-align: center;
+                    color: rgb(221, 221, 221);
+                    font-family: 'Trade Gothic LT Std', sans-serif;
+                    font-size: 2vh;
+                    border-bottom-left-radius: 1ch;
+                    border-bottom-right-radius: 1ch;
+                }
+            }
+            
+            #qr-menu
             {
                 position: absolute;
-                top: 0%;
-                left: 0%;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.4);
+                top: 10%;
+                left: 10%;
+                width: 80%;
+                height: 80%;
+                background-color: rgb(221, 221, 221);
+                border-radius: 1.5ch;
+                border-width: 0.5ch;
+                border-style: solid;
+                border-color: rgb(230, 62, 48);
             }
 
             @media screen and (max-aspect-ratio : 1)
             {
-                div#qrcode-container
+                #qr-container
                 {
                     position: absolute;
                     top: 20%;
@@ -26,7 +89,7 @@
 
             @media screen and (min-aspect-ratio : 1)
             {
-                div#qrcode-container
+                #qr-container
                 {
                     position: absolute;
                     top: 25%;
@@ -38,37 +101,66 @@
 
             @media screen and (max-aspect-ratio : 1)
             {
-                div#qrcode > img
+                div#qr > img
                 { 
                     display: block;
                     margin: auto;
-                    width: 80%; 
+                    width: 80%;
+                    border-radius: 2ch;
                 }
             }
 
             @media screen and (min-aspect-ratio : 1)
             {
-                div#qrcode > img
+                div#qr > img
                 { 
                     display: block;
                     margin: auto;
-                    height: 100%; 
+                    height: 100%;
+                    border-radius: 2ch;
                 }
             }
 
-            #qr-cross-icon
+            @media screen and (max-aspect-ratio : 1)
             {
-                position: absolute;
-                top: 1%;
-                right: 1%;
+                img#qr-cross-icon
+                {
+                    position: absolute;
+                    top: 1%;
+                    right: 1%;
+                    height: 5%;
+                }
+            }
+
+            @media screen and (min-aspect-ratio : 1) and (max-height : 500px)
+            {
+                img#qr-cross-icon
+                {
+                    position: absolute;
+                    top: 1%;
+                    right: 1%;
+                    width: 3%;
+                }
+            }
+
+            @media screen and (min-aspect-ratio : 1) and (min-height : 500px)
+            {
+                img#qr-cross-icon
+                {
+                    position: absolute;
+                    top: 1%;
+                    right: 0.5%;
+                    width: 2.5%;
+                }
             }
         </style>
         <script type="text/javascript" src="qrcode.min.js"></script>
-        <script type="module"> window.onload = () => { new QRCode(document.getElementById('qrcode'), window.location.href) } </script>
+        <script type="module"> window.onload = () => { new QRCode(document.getElementById('qr'), window.location.href) } </script>
     </head>
     <body>
-        <div id="qrcode-menu">
-            <div id="qrcode-container"><div id="qrcode"></div></div>
-            <img id="qr-cross-icon" src="assets/cross.png"/>
+        <div id="qr-menu">
+            <p id="qr-title">SCAN THE QR TO VIEW IN YOUR PHONE</p>
+            <div id="qr-container"><div id="qr"></div></div>
+            <img id="qr-cross-icon" src="assets/cross-red.png"/>
         </div></body>
 </html>
