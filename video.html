@@ -1,0 +1,250 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <style>
+            @media screen and (max-aspect-ratio : 1)
+            {
+                #video-title
+                {
+                    display: block;
+                    margin: auto;
+                    padding-top: 2%;
+                    padding-bottom: 2%;
+                    width: 20vh;
+                    background-color: rgb(230, 62, 48);
+                    text-align: center;
+                    color: rgb(221, 221, 221);
+                    font-family: 'Trade Gothic LT Std', sans-serif;
+                    font-size: 2vh;
+                    border-bottom-left-radius: 1ch;
+                    border-bottom-right-radius: 1ch;
+                }
+            }
+
+            @media screen and (min-aspect-ratio : 1) and (max-height: 600px)
+            {
+                #video-title
+                {
+                    display: block;
+                    margin: auto;
+                    padding-top: 1%;
+                    padding-bottom: 1%;
+                    width: 40vh;
+                    background-color: rgb(230, 62, 48);
+                    text-align: center;
+                    color: rgb(221, 221, 221);
+                    font-family: 'Trade Gothic LT Std', sans-serif;
+                    font-size: 4vh;
+                    border-bottom-left-radius: 1ch;
+                    border-bottom-right-radius: 1ch;
+                }
+            }
+
+            @media screen and (min-aspect-ratio : 1) and (min-height: 600px)
+            {
+                #video-title
+                {
+                    display: block;
+                    margin: auto;
+                    padding-top: 1%;
+                    padding-bottom: 1%;
+                    width: 30vh;
+                    background-color: rgb(230, 62, 48);
+                    text-align: center;
+                    color: rgb(221, 221, 221);
+                    font-family: 'Trade Gothic LT Std', sans-serif;
+                    font-size: 2vh;
+                    border-bottom-left-radius: 1ch;
+                    border-bottom-right-radius: 1ch;
+                }
+            }
+
+            #video-screen
+            {
+                position: absolute;
+                top: 0%;
+                left: 0%;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.4);
+            }
+
+            @media screen and (max-aspect-ratio : 1) and (max-width : 500px)
+            {
+                #video-container
+                {
+                    position: absolute;
+                    top: 20%;
+                    left: 10%;
+                    width: 80%;
+                    height: 33%;
+                    background-color: rgb(221, 221, 221);
+                    border-radius: 1.5ch;
+                    border-width: 0.5ch;
+                    border-style: solid;
+                    border-color: rgb(230, 62, 48);
+                }
+            }
+
+            @media screen and (max-aspect-ratio : 1) and (min-width : 500px)
+            {
+                #video-container
+                {
+                    position: absolute;
+                    top: 20%;
+                    left: 10%;
+                    width: 80%;
+                    height: 42%;
+                    background-color: rgb(221, 221, 221);
+                    border-radius: 1.5ch;
+                    border-width: 0.5ch;
+                    border-style: solid;
+                    border-color: rgb(230, 62, 48);
+                }
+            }
+
+            @media screen and (min-aspect-ratio : 1)
+            {
+                #video-container
+                {
+                    position: absolute;
+                    top: 10%;
+                    left: 10%;
+                    width: 80%;
+                    height: 80%;
+                    background-color: rgb(221, 221, 221);
+                    border-radius: 1.5ch;
+                    border-width: 0.5ch;
+                    border-style: solid;
+                    border-color: rgb(230, 62, 48);
+                }
+            }
+
+            @media screen and (max-aspect-ratio : 1) and (max-width : 500px)
+            {
+                #video-container-outer
+                {
+                    position: absolute;
+                    top: 20%;
+                }
+            }
+
+            @media screen and (max-aspect-ratio : 1) and (min-width : 500px)
+            {
+                #video-container-outer
+                {
+                    position: absolute;
+                    top: 15%;
+                }
+            }
+
+            @media screen and (min-aspect-ratio : 1) and (max-height: 600px)
+            {
+                #video-container-outer
+                {
+                    position: absolute;
+                    top: 18%;
+                }
+            }
+
+            @media screen and (min-aspect-ratio : 1) and (min-height: 600px)
+            {
+                #video-container-outer
+                {
+                    position: absolute;
+                    top: 15%;
+                }
+            }
+
+            @media screen and (max-aspect-ratio : 1)
+            {
+                #video
+                {
+                    display: block;
+                    margin: auto;
+                    width: 100%;
+                }
+            }
+
+            @media screen and (min-aspect-ratio : 1) and (max-height: 500px)
+            {
+                #video
+                {
+                    display: block;
+                    margin: auto;
+                    width: 60%;
+                    border-radius: 2ch;
+                } 
+            }
+
+            @media screen and (min-aspect-ratio : 1) and (min-height: 500px) and (max-width: 1500px)
+            {
+                #video
+                {
+                    display: block;
+                    margin: auto;
+                    width: 80%;
+                    border-radius: 2ch;
+                }
+            }
+
+            @media screen and (min-aspect-ratio : 1) and (min-height: 500px) and (min-width: 1500px)
+            {
+                #video
+                {
+                    display: block;
+                    margin: auto;
+                    width: 60%;
+                    border-radius: 2ch;
+                }
+            }
+
+            @media screen and (max-aspect-ratio : 1)
+            {
+                img#video-cross-icon
+                {
+                    position: absolute;
+                    top: 1%;
+                    right: 1%;
+                    height: 5%;
+                }
+            }
+
+            @media screen and (min-aspect-ratio : 1) and (max-height : 500px)
+            {
+                img#video-cross-icon
+                {
+                    position: absolute;
+                    top: 1%;
+                    right: 1%;
+                    width: 3%;
+                }
+            }
+
+            @media screen and (min-aspect-ratio : 1) and (min-height : 500px)
+            {
+                img#video-cross-icon
+                {
+                    position: absolute;
+                    top: 1%;
+                    right: 0.5%;
+                    width: 2.5%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="video-screen">
+            <div id="video-container">
+                <p id="video-title">VIDEO PLAYER</p>
+                <div id="video-container-outer">
+                    <video id="video" controls>
+                        <source src="../../assets/vid.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <img id="video-cross-icon" src="assets/cross-red.png"/>
+            </div>
+        </div>
+    </body>
+</html>
