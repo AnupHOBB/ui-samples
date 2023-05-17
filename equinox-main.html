@@ -438,6 +438,56 @@
                 }
             }
         </style>
+        <script type="module">
+            let sceneType = 'r1'
+
+            const queryString = window.location.search
+            if (queryString != undefined)
+            {
+                const urlParams = new URLSearchParams(queryString)
+                let type = urlParams.get('type')
+                if (type != undefined)
+                    sceneType = type
+            }
+            
+            const residentialLabel = document.getElementById('residential-label')
+            const commercialLabel = document.getElementById('commercial-label')
+
+            const residentialLabelContainer = document.getElementById('residential-label-container')
+            residentialLabelContainer.addEventListener('click', event => loadResidential())
+
+            const commercialLabelContainer = document.getElementById('commercial-label-container')
+            commercialLabelContainer.addEventListener('click', event => loadCommercial())
+
+            const launchButton = document.getElementById('launch-btn-label')
+            launchButton.addEventListener('click', event => { window.location.href = 'http://127.0.0.1:5502/app/documents/scene.html?type='+sceneType })
+
+            function loadResidential()
+            {
+                commercialLabelContainer.style.backgroundColor = 'rgba(0, 0, 0, 0)'
+                commercialLabel.style.color = 'white'
+
+                residentialLabelContainer.style.backgroundColor = 'white'
+                residentialLabel.style.color = 'black'
+
+                document.body.style.backgroundImage = 'url("assets/equinox-residential.jpg")'
+
+                sceneType = 'r1'
+            }
+
+            function loadCommercial()
+            {
+                residentialLabelContainer.style.backgroundColor = 'rgba(0, 0, 0, 0)'
+                residentialLabel.style.color = 'white'
+
+                commercialLabelContainer.style.backgroundColor = 'white'
+                commercialLabel.style.color = 'black'
+
+                document.body.style.backgroundImage = 'url("assets/equinox-commercial.jpg")'
+
+                sceneType = 'c1'
+            }
+        </script>
     </head>
     <body>
         <div id="overlay">
