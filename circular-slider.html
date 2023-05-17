@@ -17,11 +17,19 @@
             div
             {
                 background-color: white;
-                width: 20px;
-                height: 20px;
+                width: 50px;
+                height: 50px;
                 border-radius: 50%;
             }
         </style>
+        <script type="importmap">
+            {
+                "imports":
+                {
+                    "three" : "./node_modules/three/src/Three.js"
+                }
+            }
+        </script>
         <script type="module">
             import * as THREE from './node_modules/three/src/Three.js'
 
@@ -46,8 +54,8 @@
                 centre.y = y + (sliderBounds.height/2)
                 ogVector = subtractVectors({ x: x, y: y, z: 0}, centre)
                 window.onfocus = () => { isMouseDown = false } 
-                window.onmousedown = () => { isMouseDown = true }
-                window.onmouseup = () => { isMouseDown = false }
+                window.onmousedown = () => {isMouseDown = true }
+                window.onmouseup = () => {isMouseDown = false }
                 window.onmousemove = (e) => {
                     if (isMouseDown)
                     {
