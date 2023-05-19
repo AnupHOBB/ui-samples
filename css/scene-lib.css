@@ -1,0 +1,172 @@
+#scene-lib-menu
+{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: 5;
+}
+
+#scene-lib-menu-inner
+{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    border-radius: 1.5ch;
+    border-width: 0.25ch;
+    border-style: solid;
+    border-color: rgb(232, 117, 36);
+}
+
+@media screen and (max-aspect-ratio : 1)
+{
+    #scene-lib-title
+    {
+        display: block;
+        margin: auto;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        width: 20vh;
+        background-color: white;
+        text-align: center;
+        color: black;
+        font-family: 'Trade Gothic LT Std', sans-serif;
+        font-size: 2vh;
+        font-weight: bold;
+        user-select: none;
+    }
+}
+
+@media screen and (min-aspect-ratio : 1) and (max-height: 600px)
+{
+    #scene-lib-title
+    {
+        display: block;
+        margin: auto;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        width: 40vh;
+        background-color: white;
+        text-align: center;
+        color: black;
+        font-family: 'Trade Gothic LT Std', sans-serif;
+        font-size: 4vh;
+        font-weight: bold;
+        user-select: none;
+    }
+}
+
+@media screen and (min-aspect-ratio : 1) and (min-height: 600px)
+{
+    #scene-lib-title
+    {
+        display: block;
+        margin: auto;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        width: 30vh;
+        background-color: white;
+        text-align: center;
+        color: black;
+        font-family: 'Trade Gothic LT Std', sans-serif;
+        font-size: 2vh;
+        font-weight: bold;
+        user-select: none;
+    }
+}
+
+#scene-lib-container
+{
+    position: absolute;
+    top: 15%;
+    left: 0%;
+    width: 100%;
+    height: 80%;
+}
+
+@media screen and (max-width: 500px)
+{
+    #scene-lib-list
+    {
+        display: grid;
+        margin: auto;
+        grid-template-columns: auto;
+        overflow: auto;
+        width: 95%;
+        max-height: 60vh;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 900px) and (max-height: 550px)
+{
+    #scene-lib-list
+    {
+        display: grid;
+        padding: 2%;
+        grid-template-columns: auto auto auto auto;
+        gap: 1vw;
+        overflow: auto;
+        width: 97%;
+        max-height: 60vh;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 900px) and (min-height: 550px)
+{
+    #scene-lib-list
+    {
+        display: grid;
+        padding: 2%;
+        grid-template-columns: auto auto;
+        gap: 1vw;
+        overflow: auto;
+        width: 97%;
+        max-height: 60vh;
+    }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1200px)
+{
+    #scene-lib-list
+    {
+        display: grid;
+        padding: 1%;
+        grid-template-columns: auto auto auto;
+        gap: 1vw;
+        overflow: auto;
+        width: 97%;
+        max-height: 60vh;
+    }
+}
+
+@media screen and (min-width: 1200px)
+{
+    #scene-lib-list
+    {
+        display: grid;
+        padding: 1%;
+        grid-template-columns: auto auto auto auto;
+        gap: 1vw;
+        overflow: auto;
+        width: 97%;
+        max-height: 60vh;
+    }
+}
+
+.scene-lib-item 
+{ 
+    width: 97%; 
+    height: 97%;
+    border-color: rgb(221, 221, 221);
+    border-style: solid;
+    border-width: 0.5ch;
+    border-radius: 2ch;
+    user-select: none;
+}
+
+.scene-lib-item:hover { border-color: rgb(230, 62, 48); }

@@ -1,0 +1,165 @@
+@media screen and (max-aspect-ratio : 1/1) and (max-width : 600px)
+{
+    #nav-bar-container
+    {
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        width: 100%;
+        height: 5%;
+        z-index: 2;
+    }
+}
+
+@media screen and (max-aspect-ratio : 1/1) and (min-width : 600px)
+{
+    #nav-bar-container
+    {
+        position: absolute;
+        bottom: 2%;
+        left: 0%;
+        width: 100%;
+        height: 5%;
+        z-index: 2;
+    }
+}
+
+@media screen and (min-aspect-ratio : 1/1) and (max-height : 600px)
+{
+    #nav-bar-container
+    {
+        position: absolute;
+        bottom: 1%;
+        left: 0%;
+        width: 100%;
+        height: 10%;
+        z-index: 2;
+    }  
+}
+
+@media screen and (min-aspect-ratio : 1/1) and (min-height : 600px)
+{
+    #nav-bar-container
+    {
+        position: absolute;
+        bottom: 2%;
+        left: 0%;
+        width: 100%;
+        height: 5%;
+        z-index: 2;
+    }  
+}
+
+@media screen and (max-aspect-ratio : 1/1) and (max-width : 600px)
+{
+    #nav-bar-outer
+    {
+        display: block;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-aspect-ratio : 1/1) and (min-width : 600px)
+{
+    #nav-bar-outer
+    {
+        display: block;
+        margin: auto;
+        width: 60%;
+        height: 100%;
+    }
+}
+
+@media screen and (min-aspect-ratio : 1/1) and (max-width : 1300px)
+{
+    #nav-bar-outer
+    {
+        display: block;
+        margin: auto;
+        width: 40%;
+        height: 100%;
+    }
+}
+
+@media screen and (min-aspect-ratio : 1/1) and (min-width : 1300px)
+{
+    #nav-bar-outer
+    {
+        display: block;
+        margin: auto;
+        width: 30%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width : 600px)
+{
+    #nav-bar
+    {
+        display: flex;
+        background: rgb(0, 0, 0, 0.7);
+        height: 100%;
+        border-width: 0.25ch 0px 0px 0px;
+        border-style: solid;
+        border-color: rgb(232, 117, 36);
+    }
+}
+
+@media screen and (min-width : 600px)
+{
+    #nav-bar
+    {
+        display: flex;
+        border-radius: 1ch;
+        background: rgb(0, 0, 0, 0.7);
+        height: 100%;
+        border-width: 0.25ch;
+        border-radius: 1ch;
+        border-style: solid;
+        border-color: rgb(232, 117, 36);
+    }
+}
+
+@media screen and (max-aspect-ratio : 1/1) and (max-width : 500px) 
+{ 
+    .nav-bar-item-outer-selected { background-color: rgb(232, 117, 36); } 
+}
+
+@media screen and (max-aspect-ratio : 1/1) and (min-width : 500px)
+{
+    .nav-bar-item-outer-selected
+    {
+        background-color: rgb(232, 117, 36);
+        border-radius: 1ch;
+    }
+}
+
+@media screen and (min-aspect-ratio : 1/1)
+{
+    .nav-bar-item-outer-selected
+    {
+        background-color: rgb(232, 117, 36);
+        border-radius: 1ch;
+    }
+}
+
+.nav-bar-item
+{
+    position: relative;
+    top: 25%;
+}
+
+img.nav-bar-icon
+{
+    display: block;
+    margin: auto;
+    height: 50%;
+    user-select: none;
+}
+
+.nav-bar-item-outer
+{
+    width: 25%;
+}

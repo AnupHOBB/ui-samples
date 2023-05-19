@@ -1,0 +1,236 @@
+@import "slider.css";
+@import "color-menu.css";
+@import "nav-bar.css";
+
+@media screen and (max-aspect-ratio: 1/1)
+{
+    #back-button
+    {
+        position: absolute;
+        top: 1%;
+        left: 2.5%;
+        width: auto;
+        background-color: white;
+        border-radius: 1ch;
+        height: 4%;
+        padding: 1%;
+        user-select: none;
+        z-index: 2;
+    }
+}
+
+@media screen and (min-aspect-ratio: 1/1)
+{
+    #back-button
+    {
+        position: absolute;
+        top: 2.5%;
+        left: 1%;
+        width: 3%;
+        background-color: white;
+        border-radius: 1ch;
+        height: auto;
+        padding: 1%;
+        user-select: none;
+        z-index: 2;
+    }
+}
+
+@media screen and (max-aspect-ratio : 1/1) and (max-width : 600px)
+{
+    #fps-counter
+    {
+        position: absolute;
+        top: 5%;
+        right: 1%;
+        width: 22vw;
+        font-size: 6vw;
+        user-select: none;
+    }
+}
+
+@media screen and (max-aspect-ratio : 1/1) and (min-width : 600px)
+{
+    #fps-counter
+    {
+        position: absolute;
+        top: 5%;
+        right: 1%;
+        width: 15vw;
+        font-size: 4vw;
+        user-select: none;
+    }
+}
+
+@media screen and (min-aspect-ratio : 1/1) and (max-height : 500px)
+{
+    #fps-counter
+    {
+        position: absolute;
+        top: 2%;
+        right: 10%;
+        width: 20%;
+        font-size: 6vh;
+        user-select: none;
+    }
+}
+
+@media screen and (min-aspect-ratio : 1/1) and (min-height : 500px)
+{
+    #fps-counter
+    {
+        position: absolute;
+        top: 2%;
+        right: 10%;
+        width: 10%;
+        font-size: 3vh;
+        user-select: none;
+    }
+}
+
+@media screen and (max-height : 400px)
+{
+    .hotspot
+    {
+        width: 20px; 
+        height: 20px;
+        border-radius: 50%;
+        border-style: solid;
+        border-color: rgb(232, 117, 36);
+        background-color: rgb(221, 221, 221);
+        z-index: 1;
+    }
+}
+
+@media screen and (min-height : 400px)
+{
+    .hotspot
+    {
+        width: 40px; 
+        height: 40px;
+        border-radius: 50%;
+        border-style: solid;
+        border-color: rgb(232, 117, 36);
+        background-color: rgb(221, 221, 221);
+        z-index: 1;
+    }
+}
+
+.hotspot:hover { transform: scale(1.2); }
+
+@media screen and (max-height: 600px)
+{
+    div#label-container
+    {
+        position: absolute;
+        top: 22%;
+        left: 0%;
+        width: 100%;
+        z-index: 2;
+    }
+}
+
+@media screen and (min-height: 600px)
+{
+    div#label-container
+    {
+        position: absolute;
+        top: 10%;
+        left: 0%;
+        width: 100%;
+        z-index: 2;
+    }
+}
+
+@media screen and (max-aspect-ratio : 1)
+{
+    div#label-container > h1 
+    { 
+        display: block;
+        margin: auto;
+        width: 30vh; 
+        color: rgb(243, 243, 243);
+        text-align: center;
+        font-weight: bold;
+        font-size: 5vh;
+        font-family: 'Trade Gothic LT Std', sans-serif;
+        user-select: none;
+    }
+}
+
+@media screen and (min-aspect-ratio : 1) and (max-width : 1500px)
+{
+    div#label-container > h1 
+    {
+        display: block;
+        margin: auto;
+        width: 24vw; 
+        color: rgb(243, 243, 243);
+        text-align: center;
+        font-weight: bold;
+        font-size: 4vw;
+        font-family: 'Trade Gothic LT Std', sans-serif;
+        user-select: none;
+    }
+}
+
+@media screen and (min-aspect-ratio : 1) and (min-width : 1500px)
+{
+    div#label-container > h1 
+    { 
+        display: block;
+        margin: auto;
+        width: 18vw; 
+        color: rgb(243, 243, 243);
+        text-align: center;
+        font-weight: bold;
+        font-size: 3vw;
+        font-family: 'Trade Gothic LT Std', sans-serif;
+        user-select: none;
+    }
+}
+
+@media screen and (max-aspect-ratio : 1)
+{
+    div#label-container > p
+    {
+        display: block;
+        margin: auto;
+        width: 25vh; 
+        color: rgb(243, 243, 243);
+        text-align: center;
+        font-size: 2vh;
+        font-family: 'Trade Gothic LT Std', sans-serif;
+        user-select: none;
+    }
+}
+
+@media screen and (min-aspect-ratio : 1) and (max-width : 1500px)
+{
+    div#label-container > p
+    {
+        display: block;
+        margin: auto;
+        width: 25vw;   
+        color: rgb(243, 243, 243);
+        text-align: center;
+        font-size: 2vw;
+        font-family: 'Trade Gothic LT Std', sans-serif;
+        user-select: none;
+    }
+}
+
+@media screen and (min-aspect-ratio : 1) and (min-width : 1500px)
+{
+    div#label-container > p
+    {
+        display: block;
+        margin: auto;
+        width: 20vw;  
+        color: rgb(243, 243, 243);
+        text-align: center;
+        font-size: 1.5vw;
+        font-family: 'Trade Gothic LT Std', sans-serif;
+        user-select: none;
+    }
+}

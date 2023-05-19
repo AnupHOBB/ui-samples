@@ -1,0 +1,191 @@
+#qr-menu
+{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: 5;
+}
+
+@media screen and (max-aspect-ratio : 1)
+{
+    #qr-menu-inner
+    {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        width: 80%;
+        height: 90vw;
+        background-color: white;
+        border-radius: 1.5ch;
+        border-width: 0.25ch;
+        border-style: solid;
+        border-color: rgb(232, 117, 36);
+    }
+}
+
+@media screen and (min-aspect-ratio : 1)
+{
+    #qr-menu-inner
+    {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        width: 80%;
+        height: 80%;
+        background-color: white;
+        border-radius: 1.5ch;
+        border-width: 0.25ch;
+        border-style: solid;
+        border-color: rgb(232, 117, 36);
+    }
+}
+
+@media screen and (max-aspect-ratio : 1)
+{
+    #qr-title
+    {
+        display: block;
+        margin: auto;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        width: 25vh;
+        background-color: white;
+        text-align: center;
+        color: black;
+        font-family: 'Trade Gothic LT Std', sans-serif;
+        font-size: 2vh;
+        font-weight: bold;
+        border-bottom-left-radius: 1ch;
+        border-bottom-right-radius: 1ch;
+        user-select: none;
+    }
+}
+
+@media screen and (min-aspect-ratio : 1) and (max-height: 600px)
+{
+    #qr-title
+    {
+        display: block;
+        margin: auto;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        width: 90vh;
+        background-color: white;
+        text-align: center;
+        color: black;
+        font-family: 'Trade Gothic LT Std', sans-serif;
+        font-size: 4vh;
+        font-weight: bold;
+        border-bottom-left-radius: 1ch;
+        border-bottom-right-radius: 1ch;
+        user-select: none;
+    }
+}
+
+@media screen and (min-aspect-ratio : 1) and (min-height: 600px)
+{
+    #qr-title
+    {
+        display: block;
+        margin: auto;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        width: 45vh;
+        background-color: white;
+        text-align: center;
+        color: black;
+        font-family: 'Trade Gothic LT Std', sans-serif;
+        font-size: 2vh;
+        font-weight: bold;
+        border-bottom-left-radius: 1ch;
+        border-bottom-right-radius: 1ch;
+        user-select: none;
+    }
+}
+
+@media screen and (max-aspect-ratio : 1)
+{
+    #qr-container
+    {
+        position: absolute;
+        top: 15%;
+        left: 0%;
+        width: 100%;
+        height: 50%;
+    }
+}
+
+@media screen and (min-aspect-ratio : 1)
+{
+    #qr-container
+    {
+        position: absolute;
+        top: 25%;
+        left: 0%;
+        width: 100%;
+        height: 50%;
+    }
+}
+
+@media screen and (max-aspect-ratio : 1)
+{
+    div#qr > img
+    { 
+        display: block;
+        margin: auto;
+        width: 80%;
+        border-radius: 2ch;
+        user-select: none;
+    }
+}
+
+@media screen and (min-aspect-ratio : 1)
+{
+    div#qr > img
+    { 
+        display: block;
+        margin: auto;
+        height: 100%;
+        border-radius: 2ch;
+        user-select: none;
+    }
+}
+
+@media screen and (max-aspect-ratio : 1)
+{
+    img#qr-cross-icon
+    {
+        position: absolute;
+        top: 1%;
+        right: 1%;
+        height: 5%;
+        user-select: none;
+    }
+}
+
+@media screen and (min-aspect-ratio : 1) and (max-height : 500px)
+{
+    img#qr-cross-icon
+    {
+        position: absolute;
+        top: 1%;
+        right: 1%;
+        width: 3%;
+        user-select: none;
+    }
+}
+
+@media screen and (min-aspect-ratio : 1) and (min-height : 500px)
+{
+    img#qr-cross-icon
+    {
+        position: absolute;
+        top: 1%;
+        right: 0.5%;
+        width: 2.5%;
+        user-select: none;
+    }
+}
