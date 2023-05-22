@@ -3,7 +3,7 @@
         <style>
             body { background-color: rgb(58, 58, 58); }
 
-            div#slider
+            div#circular-slider
             {
                 display: block;
                 margin: auto;
@@ -18,7 +18,7 @@
                 user-select: none;
             }
 
-            div#slider-control
+            div#circular-slider-cursor
             {
                 background-color: white;
                 width: 50px;
@@ -50,7 +50,7 @@
             }
             window.onload = () => 
             { 
-                circularSlider = new CircularSlider(document.getElementById('slider'))
+                circularSlider = new CircularSlider(document.getElementById('circular-slider'))
                 circularSlider.setMin(0)
                 circularSlider.setMax(100)
                 circularSlider.setValue(93)
@@ -58,6 +58,6 @@
         </script>
     </head>
     <body>
-        <div id = "slider"></div>
+        <div id = "circular-slider"></div>
     </body>
 </html>

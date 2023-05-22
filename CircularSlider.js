@@ -10,7 +10,7 @@ export class CircularSlider
     {
         this._sliderBackground = element
         this._sliderIndicator = document.createElement('div')
-        this._sliderIndicator.id = "slider-control"
+        this._sliderIndicator.id = "circular-slider-cursor"
         this._centre = { x:0, y:0, z:0 }
         this._isMouseDown = false
         this._angle = 0
@@ -24,13 +24,14 @@ export class CircularSlider
         this._centre.x = x
         this._centre.y = y + (this._sliderBounds.height/2)
         this._ogVector = Misc.subtractVectors({ x: x, y: y, z: 0}, this._centre)
-        this._sliderIndicator.onmousedown = () => {this._isMouseDown = true }
-        this._ogVector = Misc.subtractVectors({ x: x, y: y, z: 0}, this._centre) 
+        this._sliderIndicator.onmousedown = () => { this._isMouseDown = true }
+        this._ogVector = Misc.subtractVectors({ x: x, y: y, z: 0}, this._centre)
+        this._isVisible = true
         document.body.appendChild(this._sliderIndicator)
         setInterval(()=>this._placeCursor(), 10)
     }
 
-    onWindowMouseUp() {this._isMouseDown = false }
+    onWindowMouseUp() { this._isMouseDown = false }
 
     onWindowMouseMove(event)
     {
@@ -62,6 +63,22 @@ export class CircularSlider
         let value = (this._angle<0)?360+this._angle:this._angle
         let convertedValue = ((value * (this._max - this._min))/360) + this._min
         return convertedValue
+    }
+
+    show(show)
+    {
+        if (this._isVisible && !show)
+        {
+            document.body.removeChild(this._sliderBackground)
+            document.body.removeChild(this._sliderIndicator)
+            this._isVisible = false
+        }
+        else if (!this._isVisible && show)
+        {
+            document.body.appendChild(this._sliderBackground)
+            document.body.appendChild(this._sliderIndicator)
+            this._isVisible = true
+        }
     }
 
     _placeCursor()

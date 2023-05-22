@@ -366,7 +366,113 @@
                     user-select: none;
                 }
             }
+
+            @media screen and (max-aspect-ratio : 1/1)
+            {
+                div#circular-slider
+                {
+                    display: block;
+                    margin: auto;
+                    border-color: rgb(232, 117, 36);
+                    border-style: solid;
+                    border-width: 0.25ch;
+                    border-radius: 50%;
+                    width: 100px;
+                    height: 100px;
+                    background-color: rgba(0, 0, 0, 0);
+                    user-select: none;
+                }
+            }
+
+            @media screen and (min-aspect-ratio : 1/1) and (max-height : 400px)
+            {
+                div#circular-slider
+                {
+                    display: block;
+                    margin-left: 80%;
+                    border-color: rgb(232, 117, 36);
+                    border-style: solid;
+                    border-width: 0.25ch;
+                    border-radius: 50%;
+                    width: 100px;
+                    height: 100px;
+                    background-color: rgba(0, 0, 0, 0);
+                    user-select: none;
+                }
+            }
+
+            @media screen and (min-aspect-ratio : 1/1) and (min-height : 400px) and (max-height : 800px)
+            {
+                div#circular-slider
+                {
+                    display: block;
+                    margin-left: 75%;
+                    border-color: rgb(232, 117, 36);
+                    border-style: solid;
+                    border-width: 0.25ch;
+                    border-radius: 50%;
+                    width: 150px;
+                    height: 150px;
+                    background-color: rgba(0, 0, 0, 0);
+                    user-select: none;
+                }
+            }
+
+            @media screen and (min-aspect-ratio : 1/1) and (min-height : 800px)
+            {
+                div#circular-slider
+                {
+                    display: block;
+                    margin: auto;
+                    border-color: rgb(232, 117, 36);
+                    border-style: solid;
+                    border-width: 0.25ch;
+                    border-radius: 50%;
+                    width: 150px;
+                    height: 150px;
+                    background-color: rgba(0, 0, 0, 0);
+                    user-select: none;
+                }
+            }
+
+            div#circular-slider-cursor
+            {
+                background-color: white;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                border-color: rgb(232, 117, 36);
+                border-style: solid;
+                border-width: 0.25ch;
+                background-color: rgb(0, 0, 0, 0.7);
+                z-index: 3;
+            }
         </style>
+                <script type="importmap">
+                    {
+                        "imports":
+                        {
+                            "three" : "./node_modules/three/src/Three.js"
+                        }
+                    }
+                </script>
+                <script type="module">
+                    import { CircularSlider } from './CircularSlider.js'
+        
+                    let circularSlider
+                    window.onmouseup = () => circularSlider.onWindowMouseUp()
+                    window.onmousemove = e => 
+                    {
+                        circularSlider.onWindowMouseMove(e)
+                        console.log(circularSlider.getValue())
+                    }
+                    window.onload = () => 
+                    { 
+                        circularSlider = new CircularSlider(document.getElementById('circular-slider'), document.getElementById('slider-container'))
+                        circularSlider.setMin(0)
+                        circularSlider.setMax(100)
+                    }
+                </script>
     </head>
     <body>
         <div id="label-container">
@@ -398,11 +504,7 @@
                 </div>
             </div>
         </div>
-        <div id="slider-container">
-            <div id="range-slider">
-                <input id="rs-range-line" class="rs-range" type="range" value="0" min="0" max="200">
-              </div>
-        </div>
+        <div id="slider-container"><div id = "circular-slider"></div></div>
         <div id="nav-bar-container">
             <div id="nav-bar-outer">
                 <div id="nav-bar">

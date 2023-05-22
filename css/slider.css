@@ -3,7 +3,7 @@
     #slider-container
     {
         position: absolute; 
-        bottom: 10%; 
+        bottom: 8%; 
         left: 0%;
         width: 100%;
         z-index: 2;
@@ -15,31 +15,31 @@
     #slider-container
     {
         position: absolute; 
-        bottom: 12%; 
+        bottom: 10%; 
         left: 0%;
         width: 100%;
         z-index: 2;
     }
 }
 
-@media screen and (min-aspect-ratio : 1/1) and (max-height : 600px)
+@media screen and (min-aspect-ratio : 1/1) and (max-height : 800px)
 {
     #slider-container
     {
         position: absolute; 
-        bottom: 20%; 
+        bottom: 5%; 
         left: 0%;
         width: 100%;
         z-index: 2;
     }
 }
 
-@media screen and (min-aspect-ratio : 1/1) and (min-height : 600px)
+@media screen and (min-aspect-ratio : 1/1) and (min-height : 800px)
 {
     #slider-container
     {
         position: absolute; 
-        bottom: 12%; 
+        bottom: 10%; 
         left: 0%;
         width: 100%;
         z-index: 2;
