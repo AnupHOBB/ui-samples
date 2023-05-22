@@ -39,109 +39,22 @@
             }
         </script>
         <script type="module">
-            import * as THREE from './node_modules/three/src/Three.js'
+            import { CircularSlider } from './CircularSlider.js'
 
-            let sliderBackground
-            let sliderIndicator
-            let centre = { x:0, y:0, z:0 }
-            let isMouseDown = false
-            let angle = 0
-            let ogVector
-            let prevPos
-            let min = 0
-            let max = 360
-
-            let load = () =>
+            let circularSlider
+            window.onmouseup = () => circularSlider.onWindowMouseUp()
+            window.onmousemove = e => 
             {
-                sliderBackground = document.querySelector('div#slider')
-                sliderIndicator = document.createElement('div')
-                sliderIndicator.id = "slider-control"
-                let sliderBounds = sliderBackground.getBoundingClientRect()
-                let x = sliderBounds.x + (sliderBounds.width/2)
-                let y = sliderBounds.y
-                centre.x = x
-                centre.y = y + (sliderBounds.height/2)
-                ogVector = subtractVectors({ x: x, y: y, z: 0}, centre)
-                sliderIndicator.onmousedown = () => {isMouseDown = true }
-                window.onmouseup = () => {isMouseDown = false }
-                window.onmousemove = (e) => {
-                    if (isMouseDown)
-                    {
-                        let newVector = subtractVectors({ x: e.clientX, y: e.clientY, z: 0}, centre)
-                        angle = angleBetwenVectors(ogVector, newVector)
-                        if (e.clientX < centre.x)
-                            angle = -angle
-                        prevPos.x = e.clientX
-                        prevPos.y = e.clientY
-                    }
-                }
-                ogVector = subtractVectors({ x: x, y: y, z: 0}, centre) 
-                document.body.appendChild(sliderIndicator)
-                setInterval(placeSliderCursor, 10)
+                circularSlider.onWindowMouseMove(e)
+                console.log(circularSlider.getValue())
             }
-
-            function placeSliderCursor()
-            {
-                let sliderBounds = sliderBackground.getBoundingClientRect()
-                let newX = sliderBounds.x + (sliderBounds.width/2)
-                let newY = sliderBounds.y
-                centre.x = newX
-                centre.y = newY + (sliderBounds.height/2)
-                ogVector = subtractVectors({ x: newX, y: newY, z: 0}, centre)
-                let rotationVector = new THREE.Vector3(ogVector.x, ogVector.y, ogVector.z)
-                rotationVector.applyAxisAngle(new THREE.Vector3(0, 0, 1), toRadians(angle))
-                let finalPos = addVectors(centre, rotationVector)
-                let indicatorCss = window.getComputedStyle(sliderIndicator)
-                let indicatorWidth = pxToNumber(indicatorCss.width)
-                let indicatorHeight = pxToNumber(indicatorCss.height)
-                sliderIndicator.style = 'position:absolute; top:'+(finalPos.y - (indicatorHeight/2))+'; left:'+(finalPos.x - (indicatorWidth/2))+';'
-                prevPos = { x: finalPos.x, y: (finalPos.y - 10), z: 0 }
-                showValue()
+            window.onload = () => 
+            { 
+                circularSlider = new CircularSlider(document.getElementById('slider'))
+                circularSlider.setMin(0)
+                circularSlider.setMax(100)
+                circularSlider.setValue(93)
             }
-
-            function showValue()
-            {
-                let value = (angle<0)?360+angle:angle
-                let convertedValue = ((value * (max - min))/360) + min
-                console.log(`value: ${convertedValue} || min: ${min} || max: ${max}`)
-            }
-
-            function cosineVectors(v1, v2)
-            {
-                let v1Normalized = normalize(v1)
-                let v2Normalized = normalize(v2)
-                return dot(v1Normalized, v2Normalized)
-            }
-
-            function toDegrees(radians) { return (radians * 7 * 180)/22 }
-
-            function toRadians(degrees) { return (degrees * 22) / (7 * 180) }
-
-            function angleBetwenVectors(v1, v2) { return toDegrees(Math.acos(cosineVectors(v1, v2))) }
-
-            function dot(v1, v2) { return v1.x * v2.x + v1.y * v2.y + v1.z * v2.z  }
-
-            function length(v) { return Math.sqrt((v.x * v.x)+(v.y * v.y)+(v.z * v.z)) }
-
-            function normalize(v)
-            {
-                let len = length(v)
-                return { x: v.x/len, y: v.y/len, z: v.z/len}
-            }
-
-            function addVectors(v1, v2) { return { x: v1.x + v2.x, y: v1.y + v2.y, z: v1.z + v2.z } }
-
-            function subtractVectors(v1, v2) { return { x: v1.x - v2.x, y: v1.y - v2.y, z: v1.z - v2.z } }
-
-            function pxToNumber(pxValueInString)
-            {
-                let numberAsChars = [] 
-                for (let i=0; i<(pxValueInString.length - 2); i++)
-                    numberAsChars.push(pxValueInString.charAt(i))
-                return Number.parseInt(numberAsChars.join(''))
-            }
-
-            window.onload = load
         </script>
     </head>
     <body>
