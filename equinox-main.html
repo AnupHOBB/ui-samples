@@ -1,12 +1,15 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, user-scalable=no">
+        <link rel="preload" href="assets/equinox-residential.jpg" as="image"/>
+        <link rel="preload" href="assets/equinox-commercial.jpg" as="image"/>
         <style>
             body 
             { 
                 width: 100%;
                 height: 100%;
                 background-image: url('assets/equinox-residential.jpg');
+                background-position: center;
                 background-size: cover;
                 overflow: hidden;
             }
@@ -20,6 +23,7 @@
                     left: 0%;
                     width: 100%;
                     height: 8%;
+                    padding: 1ch;
                     border-width: 0px 0px 0.25ch 0px;
                     border-style: solid;
                     border-color: rgb(232, 117, 36);
@@ -36,6 +40,7 @@
                     left: 0%;
                     width: 100%;
                     height: 20%;
+                    padding: 1ch;
                     border-width: 0px 0px 0.25ch 0px;
                     border-style: solid;
                     border-color: rgb(232, 117, 36);
@@ -52,6 +57,7 @@
                     left: 0%;
                     width: 100%;
                     height: 8%;
+                    padding: 1ch;
                     border-width: 0px 0px 0.25ch 0px;
                     border-style: solid;
                     border-color: rgb(232, 117, 36);
@@ -59,39 +65,145 @@
                 }
             }
 
-            @media screen and ((max-aspect-ratio : 1/1) or (min-aspect-ratio : 1/1)) and (max-width : 1670px)
+            @media screen and (max-aspect-ratio : 1/1) and (max-width: 300px)
             {
                 img#logo
                 {
-                    position: absolute;
-                    top: -1%;
+                    position: relative;
+                    top: 0%;
                     left: 1.5%;
                     width: auto;
-                    height: 100%;
+                    height: 8vh;
+                    user-select: none;
                 }
             }
 
-            @media screen and (min-aspect-ratio : 1/1) and (min-width : 1670px)
+            @media screen and (max-aspect-ratio : 1/1) and (max-width: 300px)
             {
                 img#logo
                 {
-                    position: absolute;
-                    top: -1%;
-                    left: 7.75%;
+                    position: relative;
+                    top: 0%;
+                    left: 1.5%;
                     width: auto;
-                    height: 100%;
+                    height: 8vh;
+                    user-select: none;
                 }
             }
 
-            @media screen and (max-aspect-ratio : 1/1)
+            @media screen and (max-aspect-ratio : 1/1) and (min-width: 300px) and (max-width: 600px)
+            {
+                img#logo
+                {
+                    position: relative;
+                    top: 0%;
+                    left: 1.5%;
+                    width: auto;
+                    height: 8vh;
+                    user-select: none;
+                }
+            }
+
+            @media screen and (max-aspect-ratio : 1/1) and (min-width: 600px)
+            {
+                img#logo
+                {
+                    position: relative;
+                    top: 0%;
+                    left: 1.5%;
+                    width: auto;
+                    height: 8vh;
+                    user-select: none;
+                }
+            }
+
+            @media screen and (min-aspect-ratio : 1/1) and (max-width : 1300px) and (max-height: 300px)
+            {
+                img#logo
+                {
+                    position: relative;
+                    top: 1%;
+                    left: 7.75%;
+                    width: auto;
+                    height: 20vh;
+                    user-select: none;
+                }
+            }
+
+            @media screen and (min-aspect-ratio : 1/1) and (max-width : 1300px) and (min-height: 300px) and (max-height: 500px)
+            {
+                img#logo
+                {
+                    position: relative;
+                    top: 1%;
+                    left: 7.75%;
+                    width: auto;
+                    height: 16vh;
+                    user-select: none;
+                }
+            }
+
+            @media screen and (min-aspect-ratio : 1/1) and (max-width : 1300px) and (min-height: 500px) and (max-height: 600px)
+            {
+                img#logo
+                {
+                    position: relative;
+                    top: 20%;
+                    left: 7.75%;
+                    width: auto;
+                    height: 12vh;
+                    user-select: none;
+                }
+            }
+
+            @media screen and (min-aspect-ratio : 1/1) and (max-width : 1300px) and (min-height: 600px)
+            {
+                img#logo
+                {
+                    position: relative;
+                    top: 1%;
+                    left: 7.75%;
+                    width: auto;
+                    height: 8vh;
+                    user-select: none;
+                }
+            }
+
+            @media screen and (min-aspect-ratio : 1/1) and (min-width : 1300px) and (max-height: 600px)
+            {
+                img#logo
+                {
+                    position: relative;
+                    top: 1%;
+                    left: 7.75%;
+                    width: auto;
+                    height: 20vh;
+                    user-select: none;
+                }
+            }
+
+            @media screen and (min-aspect-ratio : 1/1) and (min-width : 1300px) and (min-height: 600px)
+            {
+                img#logo
+                {
+                    position: relative;
+                    top: 1%;
+                    left: 7.75%;
+                    width: auto;
+                    height: 8vh;
+                    user-select: none;
+                }
+            }
+
+            @media screen and (max-aspect-ratio : 1/1) and (max-width: 300px)
             {
                 p#launch-btn-label
                 {
                     position: absolute;
                     top: 0%;
-                    right: 1.5%;
+                    right: 5%;
                     color: white;
-                    width: 100px;
+                    width: 110px;
                     padding: 1ch;
                     font-size: 2vh;
                     font-family: 'Trade Gothic LT Std', sans-serif;
@@ -106,15 +218,61 @@
                 }
             }
 
-            @media screen and (max-aspect-ratio : 1/1)
+            @media screen and (max-aspect-ratio : 1/1) and (max-width: 300px)
+            {
+                p#launch-btn-label
+                {
+                    position: absolute;
+                    top: 10%;
+                    right: 10%;
+                    color: white;
+                    width: 30vw;
+                    padding: 1ch;
+                    font-size: 2vh;
+                    font-family: 'Trade Gothic LT Std', sans-serif;
+                    font-weight: bold;
+                    text-align: center;
+                    background-color: rgba(0, 0, 0, 0);
+                    border-radius: 8ch;
+                    border-style: solid;
+                    border-color: white;
+                    border-width: 0.1ch;
+                    user-select: none;
+                }
+            }
+
+            @media screen and (max-aspect-ratio : 1/1) and (min-width: 300px) and (max-width: 600px)
             {
                 p#launch-btn-label
                 {
                     position: absolute;
                     top: 0%;
-                    right: 1.5%;
+                    right: 5%;
                     color: white;
                     width: 110px;
+                    padding: 1ch;
+                    font-size: 2vh;
+                    font-family: 'Trade Gothic LT Std', sans-serif;
+                    font-weight: bold;
+                    text-align: center;
+                    background-color: rgba(0, 0, 0, 0);
+                    border-radius: 8ch;
+                    border-style: solid;
+                    border-color: white;
+                    border-width: 0.1ch;
+                    user-select: none;
+                }
+            }
+
+            @media screen and (max-aspect-ratio : 1/1) and (min-width: 600px)
+            {
+                p#launch-btn-label
+                {
+                    position: absolute;
+                    top: 0%;
+                    right: 5%;
+                    color: white;
+                    width: 250px;
                     padding: 1ch;
                     font-size: 2vh;
                     font-family: 'Trade Gothic LT Std', sans-serif;
@@ -135,11 +293,11 @@
                 {
                     position: absolute;
                     top: 0%;
-                    right: 1.5%;
+                    right: 10%;
                     color: white;
                     width: 100px;
                     padding: 1ch;
-                    font-size: 2vw;
+                    font-size: 6vh;
                     font-family: 'Trade Gothic LT Std', sans-serif;
                     font-weight: bold;
                     text-align: center;
@@ -158,11 +316,11 @@
                 {
                     position: absolute;
                     top: 10%;
-                    right: 1.5%;
+                    right: 5%;
                     color: white;
                     width: 100px;
                     padding: 1ch;
-                    font-size: 2vw;
+                    font-size: 4vh;
                     font-family: 'Trade Gothic LT Std', sans-serif;
                     font-weight: bold;
                     text-align: center;
@@ -181,7 +339,7 @@
                 {
                     position: absolute;
                     top: 20%;
-                    right: 1.5%;
+                    right: 5%;
                     color: white;
                     width: 100px;
                     padding: 1ch;
@@ -204,7 +362,7 @@
                 {
                     position: absolute;
                     top: 0%;
-                    right: 1.5%;
+                    right: 5%;
                     color: white;
                     width: 100px;
                     padding: 1ch;
@@ -221,17 +379,40 @@
                 }
             }
 
-            @media screen and (min-aspect-ratio : 1/1) and (min-width : 1300px) and (max-width : 1670px) and (min-height: 600px)
+            @media screen and (min-aspect-ratio : 1/1) and (min-width : 1300px) and (max-width : 1670px)
             {
                 p#launch-btn-label
                 {
                     position: absolute;
                     top: 0%;
-                    right: 1.5%;
+                    right: 5%;
                     color: white;
-                    width: 100px;
+                    width: 10vw;
                     padding: 1ch;
                     font-size: 2vh;
+                    font-family: 'Trade Gothic LT Std', sans-serif;
+                    font-weight: bold;
+                    text-align: center;
+                    background-color: rgba(0, 0, 0, 0);
+                    border-radius: 8ch;
+                    border-style: solid;
+                    border-color: white;
+                    border-width: 0.1ch;
+                    user-select: none;
+                }
+            }
+
+            @media screen and (min-aspect-ratio : 1/1) and (min-width : 1670px) and (max-height: 600px)
+            {
+                p#launch-btn-label
+                {
+                    position: absolute;
+                    top: 0%;
+                    right: 5%;
+                    color: white;
+                    width: 10vw;
+                    padding: 1ch;
+                    font-size: 5vh;
                     font-family: 'Trade Gothic LT Std', sans-serif;
                     font-weight: bold;
                     text-align: center;
@@ -252,9 +433,9 @@
                     top: 0%;
                     right: 7.75%;
                     color: white;
-                    width: 100px;
+                    width: 10vw;
                     padding: 1ch;
-                    font-size: 2vh;
+                    font-size: 2.5vh;
                     font-family: 'Trade Gothic LT Std', sans-serif;
                     font-weight: bold;
                     text-align: center;
@@ -313,13 +494,29 @@
                 }
             }
 
-            @media screen and (max-aspect-ratio : 1/1) and (min-width: 600px)
+            @media screen and (max-aspect-ratio : 1/1) and (min-width: 600px) and (max-width: 1000px)
             {
                 div#label-inner-container
                 {
                     display: flex;
                     margin: auto;
-                    width: 500px;
+                    width: 80vw;
+                    border-radius: 8ch;
+                    border-style: solid;
+                    border-color: white;
+                    border-width: 0.25ch;
+                    padding: 0.5ch;
+                    background-color: rgba(0, 0, 0, 0.7);
+                }
+            }
+
+            @media screen and (max-aspect-ratio : 1/1) and (min-width: 1000px)
+            {
+                div#label-inner-container
+                {
+                    display: flex;
+                    margin: auto;
+                    width: 80vw;
                     border-radius: 8ch;
                     border-style: solid;
                     border-color: white;
@@ -335,7 +532,7 @@
                 {
                     display: flex;
                     margin: auto;
-                    width: 300px;
+                    width: 40vw;
                     border-radius: 8ch;
                     border-style: solid;
                     border-color: white;
@@ -345,13 +542,29 @@
                 }
             }
 
-            @media screen and (min-aspect-ratio : 1/1) and (min-height: 600px)
+            @media screen and (min-aspect-ratio : 1/1) and (min-height: 600px) and (max-width: 600px)
             {
                 div#label-inner-container
                 {
                     display: flex;
                     margin: auto;
                     width: 400px;
+                    border-radius: 8ch;
+                    border-style: solid;
+                    border-color: white;
+                    border-width: 0.5ch;
+                    padding: 1ch;
+                    background-color: rgba(0, 0, 0, 0.7);
+                }
+            }
+
+            @media screen and (min-aspect-ratio : 1/1) and (min-height: 600px) and (min-width: 600px)
+            {
+                div#label-inner-container
+                {
+                    display: flex;
+                    margin: auto;
+                    width: 30vw;
                     border-radius: 8ch;
                     border-style: solid;
                     border-color: white;
@@ -441,15 +654,6 @@
         <script type="module">
             let sceneType = 'r1'
 
-            const queryString = window.location.search
-            if (queryString != undefined)
-            {
-                const urlParams = new URLSearchParams(queryString)
-                let type = urlParams.get('type')
-                if (type != undefined)
-                    sceneType = type
-            }
-            
             const residentialLabel = document.getElementById('residential-label')
             const commercialLabel = document.getElementById('commercial-label')
 
@@ -460,7 +664,20 @@
             commercialLabelContainer.addEventListener('click', event => loadCommercial())
 
             const launchButton = document.getElementById('launch-btn-label')
-            launchButton.addEventListener('click', event => { window.location.href = 'http://127.0.0.1:5502/app/documents/scene.html?type='+sceneType })
+            launchButton.addEventListener('click', event => { window.location.href = 'app/documents/scene.html?t='+sceneType })
+
+            const queryString = window.location.search
+            if (queryString != undefined)
+            {
+                const urlParams = new URLSearchParams(queryString)
+                let type = urlParams.get('t')
+                if (type != undefined)
+                {    
+                    sceneType = type
+                    if (sceneType.includes('c'))
+                        loadCommercial()
+                }
+            }
 
             function loadResidential()
             {

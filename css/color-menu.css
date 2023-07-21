@@ -250,8 +250,8 @@
     {
         display: block;
         margin: auto;
-        width: 80px; 
-        height: 80px;
+        width: 5vh; 
+        height: 5vh;
         border-radius: 50%;
         border-width: 0.25ch;
         border-style: solid;
