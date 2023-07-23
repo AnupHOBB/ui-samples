@@ -100,7 +100,7 @@
 
 .hotspot:hover { transform: scale(1.2); }
 
-@media screen and (max-aspect-ratio: 1) and (max-width: 500px)
+@media screen and (max-aspect-ratio: 1) and (max-width: 600px)
 {
     div#label-container
     {
@@ -112,7 +112,7 @@
     }
 }
 
-@media screen and (max-aspect-ratio: 1) and (min-width: 500px)
+@media screen and (max-aspect-ratio: 1) and (min-width: 600px)
 {
     div#label-container
     {
@@ -136,7 +136,7 @@
     }
 }
 
-@media screen and (min-aspect-ratio: 1.1) and (min-height: 600px)
+@media screen and (min-aspect-ratio: 1) and (min-height: 600px)
 {
     div#label-container
     {
@@ -163,61 +163,29 @@
     }
 }
 
-@media screen and (min-aspect-ratio : 1) and (max-height : 300px)
+@media screen and (min-aspect-ratio : 1) and (max-width: 1000px) and (max-height: 600px)
 {
     div#label-container > p
     {
         display: block;
         margin: auto;
-        padding-left: 15vh;
-        width: 70vh;   
+        width: 30vw;
         color: white;
         text-align: center;
-        font-size: 5vh;
+        font-size: 2vw;
         font-family: 'Trade Gothic LT Std', sans-serif;
         user-select: none;
     }
 }
 
-@media screen and (min-aspect-ratio : 1) and (min-height : 300px) and (max-height : 600px) and (max-width: 1000px)
+@media screen and (min-aspect-ratio : 1) and (max-width: 1000px) and (min-height: 600px)
 {
     div#label-container > p
     {
         display: block;
         margin: auto;
-        width: 50vh;  
-        color: white;
-        text-align: center;
-        font-size: 3.5vh;
-        font-family: 'Trade Gothic LT Std', sans-serif;
-        user-select: none;
-    }
-}
-
-@media screen and (min-aspect-ratio : 1) and (min-height : 300px) and (max-height : 600px) and (min-width: 1000px)
-{
-    div#label-container > p
-    {
-        display: block;
-        margin: auto;
-        padding-left: 10vh;
-        width: 50vh;  
-        color: white;
-        text-align: center;
-        font-size: 3vh;
-        font-family: 'Trade Gothic LT Std', sans-serif;
-        user-select: none;
-    }
-}
-
-@media screen and (min-aspect-ratio : 1) and (min-height : 600px) and (max-width: 1000px)
-{
-    div#label-container > p
-    {
-        display: block;
-        margin: auto;
-        padding-left: 20vh;
-        width: 40vh;  
+        padding-left: 4vw;
+        width: 40vh;
         color: white;
         text-align: center;
         font-size: 2vh;
@@ -226,17 +194,33 @@
     }
 }
 
-@media screen and (min-aspect-ratio : 1) and (min-height : 600px) and (min-width: 1000px)
+@media screen and (min-aspect-ratio : 1) and (min-width: 1000px) and (max-height: 600px)
 {
     div#label-container > p
     {
         display: block;
         margin: auto;
-        padding-left: 35vh;
-        width: 50vh;  
+        padding-left: 20vw;
+        width: 80vh;
         color: white;
         text-align: center;
-        font-size: 3vh;
+        font-size: 4vh;
+        font-family: 'Trade Gothic LT Std', sans-serif;
+        user-select: none;
+    }
+}
+
+@media screen and (min-aspect-ratio : 1) and (min-width: 1000px) and (min-height: 600px)
+{
+    div#label-container > p
+    {
+        display: block;
+        margin: auto;
+        padding-left: 20vw;
+        width: 50vh;
+        color: white;
+        text-align: center;
+        font-size: 2.5vh;
         font-family: 'Trade Gothic LT Std', sans-serif;
         user-select: none;
     }
