@@ -99,7 +99,7 @@
     #nav-bar
     {
         display: flex;
-        background: rgb(0, 0, 0, 0.7);
+        background: rgb(55, 58, 54);
         height: 100%;
         border-width: 0.25ch 0px 0px 0px;
         border-style: solid;
@@ -113,7 +113,7 @@
     {
         display: flex;
         border-radius: 1ch;
-        background: rgb(0, 0, 0, 0.7);
+        background: rgb(55, 58, 54);
         height: 100%;
         border-width: 0.25ch;
         border-radius: 1ch;
