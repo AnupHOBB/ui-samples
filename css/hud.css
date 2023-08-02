@@ -1,6 +1,7 @@
 @import "slider.css";
 @import "color-menu.css";
 @import "nav-bar.css";
+@import "https://fonts.googleapis.com/css?family=Roboto";
 
 @media screen and (max-aspect-ratio : 1/1) and (max-width : 600px)
 {
@@ -117,7 +118,7 @@
     div#label-container
     {
         position: absolute;
-        top: 5%;
+        top: 4%;
         left: 0%;
         width: 100%;
         z-index: 2;
@@ -141,87 +142,69 @@
     div#label-container
     {
         position: absolute;
-        top: 5%;
+        top: 4%;
         left: 0%;
         width: 100%;
         z-index: 2;
     }
 }
 
-@media screen and (max-aspect-ratio : 1)
+@media screen and (max-aspect-ratio : 1) 
 {
     div#label-container > p
     {
         display: block;
         margin: auto;
-        width: 30vh; 
+        width: 100%; 
         color: white;
         text-align: center;
         font-size: 2vh;
-        font-family: 'Trade Gothic LT Std', sans-serif;
+        font-family: 'Roboto';
         user-select: none;
     }
 }
 
-@media screen and (min-aspect-ratio : 1) and (max-width: 1000px) and (max-height: 600px)
+@media screen and (min-aspect-ratio : 1) and (max-width: 1000px)
 {
     div#label-container > p
     {
         display: block;
         margin: auto;
-        width: 30vw;
+        width: 35%;
         color: white;
-        text-align: center;
+        text-align: right;
         font-size: 2vw;
-        font-family: 'Trade Gothic LT Std', sans-serif;
+        font-family: 'Roboto';
         user-select: none;
     }
 }
 
-@media screen and (min-aspect-ratio : 1) and (max-width: 1000px) and (min-height: 600px)
+@media screen and (min-aspect-ratio : 1) and (min-width: 1000px) and (max-width: 1200px)
 {
     div#label-container > p
     {
         display: block;
         margin: auto;
-        padding-left: 4vw;
-        width: 40vh;
+        width: 40%;
         color: white;
-        text-align: center;
-        font-size: 2vh;
-        font-family: 'Trade Gothic LT Std', sans-serif;
-        user-select: none;
-    }
-}
-
-@media screen and (min-aspect-ratio : 1) and (min-width: 1000px) and (max-height: 600px)
-{
-    div#label-container > p
-    {
-        display: block;
-        margin: auto;
-        padding-left: 20vw;
-        width: 80vh;
-        color: white;
-        text-align: center;
-        font-size: 4vh;
-        font-family: 'Trade Gothic LT Std', sans-serif;
-        user-select: none;
-    }
-}
-
-@media screen and (min-aspect-ratio : 1) and (min-width: 1000px) and (min-height: 600px)
-{
-    div#label-container > p
-    {
-        display: block;
-        margin: auto;
-        padding-left: 20vw;
-        width: 50vh;
-        color: white;
-        text-align: center;
+        text-align: right;
         font-size: 2.5vh;
-        font-family: 'Trade Gothic LT Std', sans-serif;
+        font-family: 'Roboto';
+        user-select: none;
+    }
+}
+
+@media screen and (min-aspect-ratio : 1) and (min-width: 1200px)
+{
+    div#label-container > p
+    {
+        display: block;
+        margin: auto;
+        width: 50%;
+        color: white;
+        text-align: right;
+        font-size: 2.5vh;
+        font-family: 'Roboto';
         user-select: none;
     }
 }

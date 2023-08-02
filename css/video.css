@@ -1,3 +1,5 @@
+@import "https://fonts.googleapis.com/css?family=Roboto";
+
 #video-screen
 {
     position: absolute;
@@ -66,13 +68,12 @@
     {
         display: block;
         margin: auto;
-        padding-top: 2%;
-        padding-bottom: 2%;
+        padding-top: 3%;
         width: 60vw;
         background-color: rgb(0, 0, 0, 0);
         text-align: center;
         color: white;
-        font-family: 'Trade Gothic LT Std', sans-serif;
+        font-family: 'Roboto';
         font-size: 2.5vh;
         font-weight: bold;
         border-bottom-left-radius: 1ch;
@@ -87,13 +88,12 @@
     {
         display: block;
         margin: auto;
-        padding-top: 1%;
-        padding-bottom: 1%;
+        padding-top: 2%;
         width: 110vh;
         background-color: rgb(0, 0, 0, 0);
         text-align: center;
         color: white;
-        font-family: 'Trade Gothic LT Std', sans-serif;
+        font-family: 'Roboto';
         font-size: 4.5vh;
         font-weight: bold;
         border-bottom-left-radius: 1ch;
@@ -108,13 +108,12 @@
     {
         display: block;
         margin: auto;
-        padding-top: 1%;
-        padding-bottom: 1%;
+        padding-top: 2%;
         width: 70vh;
         background-color: rgb(0, 0, 0, 0);
         text-align: center;
         color: white;
-        font-family: 'Trade Gothic LT Std', sans-serif;
+        font-family: 'Roboto';
         font-size: 3vh;
         font-weight: bold;
         border-bottom-left-radius: 1ch;
@@ -173,126 +172,110 @@
     }
 }
 
-@media screen and (max-aspect-ratio : 1) and (max-width: 300px)
+@media screen and (max-width: 300px)
 {
     #video
     {
         display: block;
         margin: auto;
-        width: 80%;
-        border-radius: 2ch;
-    }
-}
-
-@media screen and (max-aspect-ratio : 1) and (min-width: 300px) and (max-width: 500px)
-{
-    #video
-    {
-        display: block;
-        margin: auto;
-        width: 60%;
-        border-radius: 2ch;
-    }
-}
-
-@media screen and (max-aspect-ratio : 1) and (min-width: 500px) and (max-width: 700px)
-{
-    #video
-    {
-        display: block;
-        margin: auto;
-        width: 60%;
-        border-radius: 2ch;
-    }
-}
-
-@media screen and (max-aspect-ratio : 1) and (min-width: 700px)
-{
-    #video
-    {
-        display: block;
-        margin: auto;
-        width: 60%;
-        border-radius: 2ch;
-    }
-}
-
-@media screen and (min-aspect-ratio : 1) and (max-aspect-ratio : 1.5)
-{
-    #video
-    {
-        display: block;
-        margin: auto;
-        width: 60%;
+        margin-top: 2%;
+        width: 30vh;
         border-radius: 2ch;
     } 
 }
 
-@media screen and (min-aspect-ratio : 1.5) and (max-aspect-ratio : 2)
+@media screen and (max-width: 600px) and (max-height: 600px)
 {
     #video
     {
         display: block;
         margin: auto;
-        width: 60%;
+        margin-top: 2%;
+        width: 30vh;
         border-radius: 2ch;
     } 
 }
 
-@media screen and (min-aspect-ratio : 1.5) and (max-aspect-ratio : 3)
+@media screen and (max-width: 600px) and (min-height: 600px)
 {
     #video
     {
         display: block;
         margin: auto;
-        width: 40%;
+        margin-top: 2%;
+        width: 30vh;
         border-radius: 2ch;
     } 
 }
 
-@media screen and (min-aspect-ratio : 3)
+@media screen and (min-width: 600px) and (max-width: 725px) and (max-height: 600px)
 {
     #video
     {
         display: block;
         margin: auto;
-        width: 30%;
+        margin-top: 2%;
+        width: 70vh;
         border-radius: 2ch;
     } 
 }
 
-@media screen and (max-aspect-ratio : 1)
+@media screen and (min-width: 600px) and (max-width: 725px) and (min-height: 600px)
 {
-    img#video-cross-icon
+    #video
     {
-        position: absolute;
-        top: 1%;
-        right: 1%;
-        height: 5%;
-        user-select: none;
-    }
+        display: block;
+        margin: auto;
+        margin-top: 2%;
+        width: 50%;
+        border-radius: 2ch;
+    } 
 }
 
-@media screen and (min-aspect-ratio : 1) and (max-height : 500px)
+@media screen and (min-width: 725px) and (max-width: 1300px) and (max-height: 650px)
 {
-    img#video-cross-icon
+    #video
     {
-        position: absolute;
-        top: 1%;
-        right: 1%;
-        width: 3%;
-        user-select: none;
-    }
+        display: block;
+        margin: auto;
+        margin-top: 2%;
+        width: 80vh;
+        border-radius: 2ch;
+    } 
 }
 
-@media screen and (min-aspect-ratio : 1) and (min-height : 500px)
+@media screen and (min-width: 725px) and (max-width: 1300px) and (min-height: 650px)
 {
-    img#video-cross-icon
+    #video
     {
-        position: absolute;
-        top: 1%;
-        right: 0.5%;
-        width: 2.5%;
-        user-select: none;
-    }
+        display: block;
+        margin: auto;
+        margin-top: 2%;
+        width: 50vw;
+        border-radius: 2ch;
+    } 
+}
+
+@media screen and (min-width: 1300px) and (max-height: 600px)
+{
+    #video
+    {
+        display: block;
+        margin: auto;
+        margin-top: 2%;
+        width: 50vh;
+        border-radius: 2ch;
+    } 
+}
+
+@media screen and (min-width: 1300px) and (min-height: 600px)
+{
+    #video
+    {
+        display: block;
+        margin: auto;
+        margin-top: 2%;
+        width: 80vh;
+        border-radius: 2ch;
+    } 
 }

@@ -1,3 +1,5 @@
+@import "https://fonts.googleapis.com/css?family=Roboto";
+
 #scene-lib-menu
 {
     position: absolute;
@@ -29,13 +31,12 @@
     {
         display: block;
         margin: auto;
-        padding-top: 2%;
-        padding-bottom: 2%;
+        padding-top: 3%;
         width: 60vw;
         background-color: rgb(0, 0, 0, 0); 
         text-align: center;
         color: white;
-        font-family: 'Trade Gothic LT Std', sans-serif;
+        font-family: 'Roboto';
         font-size: 2.5vh;;
         font-weight: bold;
         user-select: none;
@@ -48,13 +49,12 @@
     {
         display: block;
         margin: auto;
-        padding-top: 1%;
-        padding-bottom: 1%;
+        padding-top: 2%;
         width: 110vh;
         background-color: rgb(0, 0, 0, 0); 
         text-align: center;
         color: white;
-        font-family: 'Trade Gothic LT Std', sans-serif;
+        font-family: 'Roboto';
         font-size: 4.5vh;
         font-weight: bold;
         user-select: none;
@@ -67,13 +67,12 @@
     {
         display: block;
         margin: auto;
-        padding-top: 1%;
-        padding-bottom: 1%;
+        padding-top: 2%;
         width: 70vh;
         background-color: rgb(0, 0, 0, 0); 
         text-align: center;
         color: white;
-        font-family: 'Trade Gothic LT Std', sans-serif;
+        font-family: 'Roboto';
         font-size: 3vh;
         font-weight: bold;
         user-select: none;
