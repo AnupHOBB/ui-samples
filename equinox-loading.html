@@ -3,13 +3,13 @@
         <meta name="viewport" content="width=device-width, user-scalable=no">
         <style>
             body 
-            { 
+            {
                 width: 100%;
                 height: 100%;
                 overflow: hidden;
             }
 
-            @media screen and (max-aspect-ratio : 1/1)
+            @media screen and (max-aspect-ratio : 1/1) 
             {
                 div#overlay 
                 {
@@ -17,16 +17,12 @@
                     top: 0%;
                     left: 0%;
                     width: 100%;
-                    height: 8%;
-                    padding: 1ch;
-                    border-width: 0px 0px 0.25ch 0px;
-                    border-style: solid;
-                    border-color: rgb(232, 117, 36);
-                    background-color: rgb(55, 58, 54); 
+                    height: 4vh;
+                    background-color: white;
                 }
             }
 
-            @media screen and (min-aspect-ratio : 1/1) and (max-height: 600px)
+            @media screen and (min-aspect-ratio : 1/1) 
             {
                 div#overlay 
                 {
@@ -34,163 +30,12 @@
                     top: 0%;
                     left: 0%;
                     width: 100%;
-                    height: 20%;
-                    padding: 1ch;
-                    border-width: 0px 0px 0.25ch 0px;
-                    border-style: solid;
-                    border-color: rgb(232, 117, 36);
-                    background-color: rgb(55, 58, 54); 
-                }
-            }
-
-            @media screen and (min-aspect-ratio : 1/1) and (min-height: 600px)
-            {
-                div#overlay 
-                {
-                    position: absolute;
-                    top: 0%;
-                    left: 0%;
-                    width: 100%;
-                    height: 8%;
-                    padding: 1ch;
-                    border-width: 0px 0px 0.25ch 0px;
-                    border-style: solid;
-                    border-color: rgb(232, 117, 36);
-                    background-color: rgb(55, 58, 54); 
-                }
-            }
-
-            @media screen and (max-aspect-ratio : 1/1) and (max-width: 300px)
-            {
-                img#logo
-                {
-                    position: relative;
-                    top: 0%;
-                    left: 1.5%;
-                    width: auto;
-                    height: 8vh;
-                    user-select: none;
-                }
-            }
-
-            @media screen and (max-aspect-ratio : 1/1) and (max-width: 300px)
-            {
-                img#logo
-                {
-                    position: relative;
-                    top: 0%;
-                    left: 1.5%;
-                    width: auto;
-                    height: 8vh;
-                    user-select: none;
-                }
-            }
-
-            @media screen and (max-aspect-ratio : 1/1) and (min-width: 300px) and (max-width: 600px)
-            {
-                img#logo
-                {
-                    position: relative;
-                    top: 0%;
-                    left: 1.5%;
-                    width: auto;
-                    height: 8vh;
-                    user-select: none;
-                }
-            }
-
-            @media screen and (max-aspect-ratio : 1/1) and (min-width: 600px)
-            {
-                img#logo
-                {
-                    position: relative;
-                    top: 0%;
-                    left: 1.5%;
-                    width: auto;
-                    height: 8vh;
-                    user-select: none;
-                }
-            }
-
-            @media screen and (min-aspect-ratio : 1/1) and (max-width : 1300px) and (max-height: 300px)
-            {
-                img#logo
-                {
-                    position: relative;
-                    top: 1%;
-                    left: 7.75%;
-                    width: auto;
-                    height: 20vh;
-                    user-select: none;
-                }
-            }
-
-            @media screen and (min-aspect-ratio : 1/1) and (max-width : 1300px) and (min-height: 300px) and (max-height: 500px)
-            {
-                img#logo
-                {
-                    position: relative;
-                    top: 1%;
-                    left: 7.75%;
-                    width: auto;
-                    height: 16vh;
-                    user-select: none;
-                }
-            }
-
-            @media screen and (min-aspect-ratio : 1/1) and (max-width : 1300px) and (min-height: 500px) and (max-height: 600px)
-            {
-                img#logo
-                {
-                    position: relative;
-                    top: 20%;
-                    left: 7.75%;
-                    width: auto;
                     height: 12vh;
-                    user-select: none;
+                    background-color: white;
                 }
             }
 
-            @media screen and (min-aspect-ratio : 1/1) and (max-width : 1300px) and (min-height: 600px)
-            {
-                img#logo
-                {
-                    position: relative;
-                    top: 1%;
-                    left: 7.75%;
-                    width: auto;
-                    height: 8vh;
-                    user-select: none;
-                }
-            }
-
-            @media screen and (min-aspect-ratio : 1/1) and (min-width : 1300px) and (max-height: 600px)
-            {
-                img#logo
-                {
-                    position: relative;
-                    top: 1%;
-                    left: 7.75%;
-                    width: auto;
-                    height: 20vh;
-                    user-select: none;
-                }
-            }
-
-            @media screen and (min-aspect-ratio : 1/1) and (min-width : 1300px) and (min-height: 600px)
-            {
-                img#logo
-                {
-                    position: relative;
-                    top: 1%;
-                    left: 7.75%;
-                    width: auto;
-                    height: 8vh;
-                    user-select: none;
-                }
-            }
-
-            div#loading-screen
+            div#loading-screen 
             {
                 position: absolute;
                 top: 0%;
@@ -199,6 +44,7 @@
                 height: 100%;
                 background-image: url("assets/equinox-residential.jpg");
                 background-size: cover;
+                background-position: center;
             }
 
             div#label-outer-container
@@ -545,9 +391,7 @@
     </head>
     <body>
         <div id="loading-screen">
-            <div id="overlay">
-                <img id="logo" src="assets/logo-white.png"/>
-            </div>
+            <div id="overlay"></div>
             <div id="label-outer-container">
                 <div id="label-inner-container">
                     <div id="loading-label-container">
