@@ -133,10 +133,10 @@
 {
     p#back-button 
     {
-        margin-top: 4.5vh;
+        margin-top: 2.5vh;
         width: 30%;
         text-align: left;
-        font-size: 3vh;
+        font-size: 2.5vh;
         font-family: 'Roboto';
         user-select: none;
         padding-left: 1ch;
@@ -147,10 +147,10 @@
 {
     p#back-button 
     {
-        margin-top: 4.5vh;
+        margin-top: 3vh;
         width: 30%;
         text-align: left;
-        font-size: 3vh;
+        font-size: 2.5vh;
         font-family: 'Roboto';
         user-select: none;
         padding-left: 1ch;
@@ -189,10 +189,10 @@
 {
     p#color-info 
     {
-        margin-top: 4.5vh;
+        margin-top: 2.5vh;
         width: 70%;
         text-align: right;
-        font-size: 3vh;
+        font-size: 2.5vh;
         font-family: 'Roboto';
         user-select: none;
         padding-right: 1ch;
@@ -203,10 +203,10 @@
 {
     p#color-info 
     {
-        margin-top: 4.5vh;
+        margin-top: 3vh;
         width: 70%;
         text-align: right;
-        font-size: 3vh;
+        font-size: 2.5vh;
         font-family: 'Roboto';
         user-select: none;
         padding-right: 1ch;
